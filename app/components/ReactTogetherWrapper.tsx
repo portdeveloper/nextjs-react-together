@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactTogether, useConnectedUsers } from "react-together";
+import CursorSharing from "./CursorSharing";
 
 interface ReactTogetherWrapperProps {
   children: React.ReactNode;
@@ -45,6 +46,9 @@ export default function ReactTogetherWrapper({
         </nav>
 
         <main className="relative z-10">{children}</main>
+        
+        {/* Cursor sharing overlay */}
+        <CursorSharing />
       </div>
     </ReactTogether>
   );
